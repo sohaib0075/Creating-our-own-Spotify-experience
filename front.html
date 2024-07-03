@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+</head>
+<body>
+    <h1>MP3 Player</h1>
+    <ul>
+        {% for mp3_file in mp3_files %}
+            <li><a href="{{ url_for('play', filename=mp3_file) }}">{{ mp3_file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
